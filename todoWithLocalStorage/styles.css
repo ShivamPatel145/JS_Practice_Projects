@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0e1a;
+  color: #e1e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #1a1f2e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  border: 1px solid #2d3748;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #4fd1c7;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 5px;
+  color: #e1e8f0;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+  background-color: #38424f;
+  border-color: #4fd1c7;
+  box-shadow: 0 0 0 2px rgba(79, 209, 199, 0.2);
+}
+
+button {
+  width: 25%;
+  padding: 10px;
+  background-color: #3182ce;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #2c5aa0;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #2d3748;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #4a5568;
+}
+
+li:hover {
+  background-color: #38424f;
+  transform: translateY(-1px);
+  border-color: #4fd1c7;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  background-color: #1a202c;
+  color: #a0aec0;
+}
+
+li button {
+  background-color: #e53e3e;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+li button:hover {
+  background-color: #c53030;
+  transform: scale(1.05);
+}
+
+li button:active {
+  transform: scale(0.95);
+}
