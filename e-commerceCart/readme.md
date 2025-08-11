@@ -1,4 +1,4 @@
-# Simple E-Commerce Cart
+# E-Commerce Cart
 
 A basic shopping cart application built with HTML, CSS, and JavaScript.
 
