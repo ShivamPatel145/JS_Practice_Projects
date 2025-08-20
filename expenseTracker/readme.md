@@ -1,50 +1,32 @@
 # Expense Tracker
 
-A simple expense tracking application built with HTML, CSS, and JavaScript.
+A personal expense tracking application to manage your daily expenses.
 
-## Project Structure
+## Versions
 
-```
-04_expenseTracker/
-├── Basic_version/
-│   ├── index.html
-│   ├── script.js
-│   └── styles.css
-└── Improve_version/
-    ├── improve.html
-    ├── improve.js
-    └── improve.css
-```
+- **Basic Version**: Simple expense tracker with core features
+- **Improved Version**: Enhanced version with categories and better UI
 
 ## Features
 
-### Basic Version
-- Add expenses with description and amount
-- View total expenses
-- Delete expenses
-- Data saved in local storage
+- Add and delete expenses
+- Track spending amounts
+- Store data locally
+- View expense history
 
-### Improved Version
-- Expense categories
-- Date tracking
-- Better design
-- Filter and search expenses
+## How to Run
 
-## How to Use
+Choose either version:
+- Basic: Open `Basic_version/index.html`
+- Improved: Open `Improve_version/improve.html`
 
-1. Open `index.html` (Basic) or `improve.html` (Improved) in your browser
-2. Enter expense details
-3. Click "Add Expense"
-4. View and manage your expenses
+## Technologies
 
-## Technologies Used
 - HTML
-- CSS
+- CSS  
 - JavaScript
 - Local Storage
 
-## Learning Goals
-- Form handling
-- Local storage
-- DOM manipulation
-- CSS styling
+## Purpose
+
+Learn JavaScript fundamentals through practical expense management.
