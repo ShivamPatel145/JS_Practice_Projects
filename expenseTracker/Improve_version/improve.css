@@ -1,0 +1,385 @@
+/* ===== CSS VARIABLES (COLORS & SPACING) ===== */
+:root {
+  /* Colors */
+  --text-dark: #1a1a1a;
+  --text-medium: #666;
+  --text-light: #999;
+  --background-white: #ffffff;
+  --background-light: #fafafa;
+  --border-color: #e5e5e5;
+  --green-color: #10b981;
+  --red-color: #ef4444;
+  --black-color: #000;
+  
+  /* Spacing */
+  --space-tiny: 4px;
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 24px;
+  --space-huge: 32px;
+  
+  /* Other */
+  --border-radius: 8px;
+  --text-tiny: 13px;
+  --text-normal: 14px;
+  --text-big: 16px;
+  --text-large: 24px;
+  --text-huge: 32px;
+}
+
+/* ===== RESET & BASIC STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--text-normal);
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  padding: var(--space-large);
+}
+
+/* ===== MAIN APP CONTAINER ===== */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+/* ===== HEADER SECTION ===== */
+.header {
+  padding: var(--space-huge);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: var(--text-huge);
+  font-weight: 600;
+  margin-bottom: var(--space-large);
+  color: var(--text-dark);
+}
+
+/* Balance Card */
+.balance-card {
+  display: inline-block;
+  padding: var(--space-large) var(--space-huge);
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  min-width: 250px;
+}
+
+.balance-label {
+  font-size: var(--text-tiny);
+  color: var(--text-medium);
+  margin-bottom: var(--space-tiny);
+  display: block;
+}
+
+.balance-amount {
+  font-size: var(--text-huge);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.balance-amount.positive {
+  color: var(--green-color);
+}
+
+.balance-amount.negative {
+  color: var(--red-color);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.main {
+  display: flex;
+  gap: var(--space-huge);
+  padding: var(--space-huge);
+}
+
+/* Left side - Form */
+.add-transaction {
+  flex: 0 0 400px; /* Fixed width */
+}
+
+/* Right side - Transactions */
+.transactions {
+  flex: 1; /* Takes remaining space */
+}
+
+/* ===== FORM STYLES ===== */
+.transaction-form {
+  padding: var(--space-large);
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+}
+
+.form-group {
+  margin-bottom: var(--space-medium);
+}
+
+.form-group:last-of-type {
+  margin-bottom: var(--space-large);
+}
+
+.form-group label {
+  display: block;
+  font-size: var(--text-tiny);
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: var(--space-tiny);
+}
+
+/* Input Fields */
+input, select {
+  width: 100%;
+  padding: var(--space-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--text-normal);
+  background-color: var(--background-white);
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: var(--black-color);
+}
+
+input::placeholder {
+  color: var(--text-light);
+}
+
+/* ===== BUTTON STYLES ===== */
+/* Main Add Button */
+.btn-primary {
+  width: 100%;
+  padding: var(--space-medium);
+  background-color: var(--black-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--text-normal);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Clear All Button */
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--text-medium);
+  font-size: var(--text-tiny);
+  cursor: pointer;
+  padding: var(--space-small);
+  transition: color 0.2s ease;
+}
+
+.btn-text:hover {
+  color: var(--text-dark);
+}
+
+/* ===== TRANSACTIONS SECTION ===== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-medium);
+}
+
+.section-header h2 {
+  font-size: var(--text-large);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Transaction List Container */
+.transaction-list {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Individual Transaction Item */
+.transaction-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-medium);
+  background-color: var(--background-white);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item:hover {
+  background-color: var(--background-light);
+}
+
+/* Transaction Info (Name & Date) */
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-name {
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transaction-date {
+  font-size: var(--text-tiny);
+  color: var(--text-light);
+}
+
+/* Transaction Amount */
+.transaction-amount {
+  font-weight: 600;
+  font-size: var(--text-normal);
+  margin-right: var(--space-medium);
+  color: var(--text-dark);
+  min-width: 80px;
+  text-align: right;
+}
+
+.transaction-amount.positive {
+  color: var(--green-color);
+}
+
+.transaction-amount.negative {
+  color: var(--red-color);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: var(--space-small);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+}
+
+.delete-btn:hover {
+  color: var(--red-color);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.delete-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+/* ===== EMPTY STATE (NO TRANSACTIONS) ===== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-huge);
+  text-align: center;
+  color: var(--text-light);
+  background-color: var(--background-white);
+}
+
+.empty-state svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-medium);
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-weight: 500;
+  margin-bottom: var(--space-tiny);
+  color: var(--text-medium);
+}
+
+.empty-state span {
+  font-size: var(--text-tiny);
+}
+
+/* ===== SUCCESS/ERROR MESSAGES ===== */
+.message {
+  padding: var(--space-medium);
+  border-radius: var(--border-radius);
+  font-size: var(--text-tiny);
+  margin-bottom: var(--space-medium);
+  border: 1px solid;
+}
+
+.message.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--green-color);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.message.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--red-color);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet Size */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stack vertically */
+    gap: var(--space-large);
+  }
+  
+  .add-transaction {
+    flex: none; /* Remove fixed width */
+  }
+  
+  body {
+    padding: var(--space-small);
+  }
+  
+  .app {
+    border-radius: 0;
+  }
+}
+
+/* Phone Size */
+@media (max-width: 480px) {
+  .header, .main {
+    padding: var(--space-medium);
+  }
+  
+  .balance-card {
+    min-width: auto;
+    width: 100%;
+  }
+}
