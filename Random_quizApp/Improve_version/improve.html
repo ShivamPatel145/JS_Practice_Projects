@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="improve.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      
+      <div id="quiz-container">
+        <div id="question-container" class="hidden">
+          <div class="question-number" id="question-number"></div>
+          <h2 id="question-text"></h2>
+          <div id="choices-container"></div>
+          <button id="next-btn" class="btn-primary hidden" disabled>Next</button>
+        </div>
+        
+        <div id="result-container" class="hidden">
+          <h2>Quiz Complete</h2>
+          <div class="score-display">
+            <span id="score"></span>
+            <span class="score-label">Your Score</span>
+          </div>
+          <button id="restart-btn" class="btn-secondary">Take Another Quiz</button>
+        </div>
+        
+        <div id="start-container">
+          <h1>Quiz App</h1>
+          <p>Test your knowledge with questions from various categories</p>
+          
+          <div class="quiz-options">
+            <div class="option-group">
+              <label for="category-select">Category</label>
+              <select id="category-select" class="select-input">
+                <option value="9">General Knowledge</option>
+                <option value="17">Science & Nature</option>
+                <option value="18">Computer Science</option>
+                <option value="19">Mathematics</option>
+                <option value="21">Sports</option>
+                <option value="22">Geography</option>
+                <option value="23">History</option>
+                <option value="11">Movies</option>
+              </select>
+            </div>
+            
+            <div class="option-group">
+              <label for="difficulty-select">Difficulty</label>
+              <select id="difficulty-select" class="select-input">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+          </div>
+          
+          <button id="start-btn" class="btn-primary">Start Quiz</button>
+          
+          <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading questions...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="improve.js"></script>
+  </body>
+</html>
